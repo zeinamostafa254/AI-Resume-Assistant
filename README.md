@@ -261,9 +261,6 @@ Or, if using a `pyproject.toml`:
 ```bash
 uv sync
 ```
-```
-
----
 
 ## Running the Application
 
