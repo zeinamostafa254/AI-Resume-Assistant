@@ -1,0 +1,23 @@
+# Environment
+.env
+.venv/
+.env
+# Python
+__pycache__/
+*.py[cod]
+
+# IDE
+.vscode/
+.idea/
+
+# RAG / Vector Store
+vectorstore/
+
+# Logs
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
+
+data/uploaded_cv.pdf

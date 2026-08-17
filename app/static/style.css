@@ -1,0 +1,310 @@
+:root {
+    --bg: #0f0a1f;
+    --sidebar: #161127;
+    --surface: #1b1430;
+    --surface-hover: #241c3e;
+
+    --primary: #7c4dff;
+    --primary-hover: #9b6dff;
+
+    --border: #342a52;
+
+    --text: #f4f1ff;
+    --text-secondary: #b5abc9;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+
+    background: var(--bg);
+
+    color: var(--text);
+
+    font-family: Arial, sans-serif;
+
+    overflow: hidden;
+}
+
+.container {
+    display: flex;
+
+    height: 100vh;
+}
+
+/* Sidebar */
+
+.sidebar {
+    width: 320px;
+
+    background: var(--sidebar);
+
+    border-right: 1px solid var(--border);
+
+    padding: 30px;
+
+    overflow-y: auto;
+}
+
+.brand {
+    margin-bottom: 40px;
+}
+
+.brand h1 {
+    font-size: 30px;
+
+    margin-bottom: 8px;
+}
+
+.brand p {
+    color: var(--text-secondary);
+}
+
+.new-chat {
+    width: 100%;
+
+    padding: 15px;
+
+    border: none;
+
+    border-radius: 14px;
+
+    background: var(--primary);
+
+    color: white;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+    margin-bottom: 40px;
+}
+
+.new-chat:hover {
+    background: var(--primary-hover);
+}
+
+.uploaded-files,
+.suggestions {
+    margin-bottom: 40px;
+}
+
+.uploaded-files h3,
+.suggestions h3 {
+    margin-bottom: 20px;
+}
+
+.suggestions button {
+    width: 100%;
+
+    padding: 14px;
+
+    margin-top: 12px;
+
+    background: var(--surface);
+
+    color: var(--text);
+
+    border: 1px solid var(--border);
+
+    border-radius: 12px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.suggestions button:hover {
+    background: var(--surface-hover);
+}
+
+/* Chat section */
+
+.chat-section {
+    flex: 1;
+
+    display: flex;
+
+    flex-direction: column;
+}
+
+.chat-header {
+    padding: 25px;
+
+    border-bottom: 1px solid var(--border);
+}
+
+.upload-box {
+    padding: 25px;
+}
+
+.drop-area {
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    height: 180px;
+
+    border: 2px dashed var(--primary);
+
+    border-radius: 20px;
+
+    background: var(--surface);
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.drop-area:hover {
+    background: var(--surface-hover);
+}
+
+.chat-window {
+    flex: 1;
+
+    overflow-y: auto;
+
+    padding: 30px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 20px;
+}
+
+.message {
+    max-width: 70%;
+
+    padding: 18px 22px;
+
+    border-radius: 20px;
+
+    line-height: 1.7;
+}
+
+.user-message {
+    align-self: flex-end;
+
+    background: var(--primary);
+}
+
+.bot-message {
+    align-self: flex-start;
+
+    background: var(--surface);
+}
+
+.chat-input {
+    display: flex;
+
+    gap: 15px;
+
+    padding: 25px;
+
+    border-top: 1px solid var(--border);
+}
+
+.chat-input input {
+    flex: 1;
+
+    padding: 18px;
+
+    background: var(--surface);
+
+    color: var(--text);
+
+    border: 1px solid var(--border);
+
+    border-radius: 14px;
+
+    outline: none;
+}
+
+.chat-input button {
+    padding: 18px 28px;
+
+    background: var(--primary);
+
+    color: white;
+
+    border: none;
+
+    border-radius: 14px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.chat-input button:hover {
+    background: var(--primary-hover);
+}
+
+/* Scrollbar */
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--primary);
+
+    border-radius: 10px;
+}
+
+/* Glowing effect */
+
+.bot-message {
+    background: var(--surface);
+
+    box-shadow:
+        0 0 20px rgba(124, 77, 255, 0.2);
+}
+
+.drop-area {
+    box-shadow:
+        0 0 30px rgba(124, 77, 255, 0.25);
+}
+
+button:disabled,
+input:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.drop-area h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.drop-area p {
+    color: var(--text-secondary);
+}
+
+#file-list {
+    list-style: none;
+}
+
+#file-list li {
+    padding: 12px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    margin-bottom: 10px;
+    word-break: break-word;
+}
+
+.message strong {
+    color: var(--primary-hover);
+}
